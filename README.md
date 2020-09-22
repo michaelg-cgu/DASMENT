@@ -103,3 +103,14 @@ I want a matrix of 23&me data with key findings of these attributes – 3.5 week
 
 If possible, restaurants and past foods should auto populate as journal is updated – 3 weeks  
 Project Estimate: 10 weeks 
+
+
+Stakeholders:
+Peers and Colleagues looking for health feedback
+
+Tasks and Roles:
+(These are subject to change)
+Samah Basit - Database / Developing
+Deven Penchel - Designer / Developing
+Michael Garcia - PM / Developing
+Ali Nusair - Database / Developing
