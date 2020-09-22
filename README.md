@@ -4,7 +4,7 @@ DASM enterprise is a software project team bring clients interactive charts and 
 Milestones can be tracked here: https://trello.com/b/544N7aI3/dp-project
 Tasks can be viewed here: https://kanbanflow.com/board/H8yaMCi
 
-This web application leverages 23 and Me data to produce various health risks in chart format. Additionally, the tool is an application that can be used to track restaurants and specific foods that did not make me feel well. Eventually, this application produces a list of food and restaurants, derived from my dietary needs (and energy level), providing a list of good foods to eat, restaurants to enjoy, etc. 
+This web application leverages Health data to produce various health risks in chart format. Additionally, the tool is an application that can be used to track restaurants and specific foods that did not make me feel well. Eventually, this application produces a list of food and restaurants, derived from my dietary needs (and energy level), providing a list of good foods to eat, restaurants to enjoy, etc. 
 
 Several key components to addres are as follows:
 What foods can affect your appetite, your digestive system  
@@ -18,9 +18,9 @@ I want to log in
 
 I want to ensure only certain people have access to my content 
 
-I want to upload 23&me data in a particular format 
+I want to upload Health data in a particular format 
 
-I want to provide a link my doctor could click on and see my 23&me, risk factors, and journal of restaurants  
+I want to provide a link my doctor could click on and see my Health, risk factors, and journal of restaurants  
 
 I want to track locations where food made me feel sick and create a list of restaurants to avoid with particular items 
 
@@ -44,9 +44,9 @@ I want to edit and delete notes but I may not want the data base to overwrite ol
 
 I want to upload photos of myself for an avatar (profile photo) 
 
-I want charts of 23&me data 
+I want charts of Health data 
 
-I want a matrix of 23&me data with key findings of these attributes 
+I want a matrix of Health data with key findings of these attributes 
 
 If possible, restaurants and past foods should auto populate as journal is updated 
 
@@ -58,13 +58,13 @@ I want to ensure only certain people have access to my content – 1 week
 
 I want a GUI – 2.5 weeks 
 
-I want to provide a link my doctor could click on and see my 23&me, risk factors, and journal of restaurants – 
+I want to provide a link my doctor could click on and see my Health, risk factors, and journal of restaurants – 
 3 weeks 
 
 want to upload photos of myself for an avatar (profile photo) - 1 week 
 Upload 
 
-I want to upload 23&me data in a particular format – 1 week 
+I want to upload Health data in a particular format – 1 week 
 
 I want to upload photos of food – 1 week 
 
@@ -77,7 +77,7 @@ Mobile responsivity – 72 hours
 
 I want the web application to be mobile ready 
 
-Data understanding of 23&me 
+Data understanding of Health data 
 
 Geolocation component 
 
@@ -99,7 +99,7 @@ I want to upload notes, date specific – 1 week
  
 Database integration with web application 
 
-I want a matrix of 23&me data with key findings of these attributes – 3.5 weeks 
+I want a matrix of Health data with key findings of these attributes – 3.5 weeks 
 
 If possible, restaurants and past foods should auto populate as journal is updated – 3 weeks  
 Project Estimate: 10 weeks 
