@@ -1,5 +1,5 @@
-# DASMENT
-DASM enterprise is a software project team bring clients interactive charts and graphs to better understand their date
+# Food For Thought
+Food for Thought is a software project team bring clients interactive charts and graphs to better understand their date
 
 Milestones can be tracked here: https://trello.com/b/544N7aI3/dp-project
 Tasks can be viewed here: https://kanbanflow.com/board/H8yaMCi
