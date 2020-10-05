@@ -160,7 +160,7 @@ As a user, I want to receive recommendation and alternative paths based on my he
 As a user, I want a component where I can be directed toward alternatives based on location (priority 30)  - DP
 
 **Create a burn down chart for monitoring your team’s progress.**
-
+* found in projimg folder
 
 **Include evidence that you are meeting for periodic stand up meetings with your teammates, ideally at least twice a week.**
 Meeting notes occur at this [link](https://trello.com/b/EF1Bg16A/ist-303-project). View meeting cards
