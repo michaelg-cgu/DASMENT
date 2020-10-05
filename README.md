@@ -108,19 +108,19 @@ Ali Nusair - Database / Developing
 Team Members: Michael Garcia (MG), Samah Basit (SB), Ali Nusair (AN), Deven Panchal (DP) 
  
 * As a user, I want to log in and create an individual profile for myself (priority 10) 
-** Frontend Django implementation: 1 week, MG  
+*Frontend Django implementation: 1 week, MG*
 * As a user, I want to upload my health data in a particular format and have a section to add/update notes (priority 10) 
-** Frontend building questionnaire: 2 days, SB 
-** Update sensitivities as they arise 
+*Frontend building questionnaire: 2 days, SB*
+*Update sensitivities as they arise*
 * As a user, I want to view output of my health statistics compared to general population and other users (priority 20) 
-** Visualization component of end result compared to gen pop: 1.5 weeks, MG
-** Visualization component of end result compared to users: 1.5 weeks, MG
+*Visualization component of end result compared to gen pop: 1.5 weeks, MG*
+*Visualization component of end result compared to users: 1.5 weeks, MG*
 * As a user, I want to receive recommendation and alternative paths based on my health data (priority 20) 
-** Recommendations on sensitivity based on upload info: 1 week, AN
-** Alternative suggestions: 1 week, AN
+*Recommendations on sensitivity based on upload info: 1 week, AN*
+*Alternative suggestions: 1 week, AN*
 * As a user, I want a component where I can be directed toward alternatives based on location (priority 30) 
-** Frontend locational component: 3 days, DP
-** Backend implementation sourcing GIS data: 1 week, DP
+*Frontend locational component: 3 days, DP*
+*Backend implementation sourcing GIS data: 1 week, DP*
 
 **Outline what features will be in Milestone 1.0 of your project.** 
 1. Designed Database  
@@ -176,20 +176,20 @@ Install the following:
 ##install commands:
 1. Open the terminal
 2. type: python --version
-** ensure python is installed
-** if installed, >3.0 continue
+ensure python is installed
+if installed, >3.0 continue
 3. type: python3 -m pip3 install --user virtualenv
 4. in the terminal, navigate to the virtualenv folder using cd commands (change directory)
 5. type source venv/bin/activiate
 6. verify that (base) has changed to (venv)
 7. in venv, type the following:
-** pip3 install django
+pip3 install django
 8. in venv, change directory again to downloaded github repo. 
 9. Navigate to DASEMENT -> FoodforThought
 10. in command line, type: ls
 11. verify that Manage.py appears
 12. type the following: 
-** python3 manage.py runserver
+python3 manage.py runserver
 
 
 
