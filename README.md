@@ -142,6 +142,7 @@ Team Members: Michael Garcia (MG), Samah Basit (SB), Ali Nusair (AN), Deven Panc
 2. Create Recommendations and Alternatives 
 
 **Make sure you have dealt with velocity before breaking into iterations.** 
+
 Milestone 1.0 Timeline: (Oct 5 - Nov 3 - 1Milestone, 2 iterations) Total days of work = 21 days
 Starting velocity: 0.35 
 Total: 10 hrs/ week 
