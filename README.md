@@ -15,18 +15,18 @@ Forecast an appropriate (carbs, fat, protein) or overall diet breakdown
 Mapping local Yelp restaurants/specific items on Whole Foods app/linking general recipes based on likes + avoid foods that irritate 
 
 
-#Part A
-##Product:
+# Part A
+## Product:
 **Health Application Highlights**
 This web application leverages Health data to produce various health risks in chart format. Additionally, the tool is an application that can be used to track restaurants and specific foods that did not make me feel well. Eventually, this application produces a list of food and restaurants, derived from my dietary needs (and energy level), providing a list of good foods to eat, restaurants to enjoy, etc. 
-##Research:
+## Research:
 **Several key components to addres are as follows:**
 What foods can affect your appetite, your digestive system  
 Interactive binary/boolean model based on what you eat 
 Forecast an appropriate (carbs, fat, protein) or overall diet breakdown
 Mapping local Yelp restaurants/specific items on Whole Foods app/linking general recipes based on likes + avoid foods that irritate
 
-##User Stories (as of Part A):
+## User Stories (as of Part A):
 
 As a User, I want to log in 
 
@@ -64,7 +64,7 @@ As a User, I want a matrix of Health data with key findings of these attributes
 
 As a User, restaurants and past foods should auto populate as journal is updated 
 
-##Estimated Timeline, Part A
+## Estimated Timeline, Part A
 Login Function 
 I want to log in – 1 week 
 I want to ensure only certain people have access to my content – 1 week 
@@ -90,12 +90,12 @@ Database integration with web application
 I want a matrix of Health data with key findings of these attributes – 3.5 weeks 
 If possible, restaurants and past foods should auto populate as journal is updated – 3 weeks  
 
-**Project Estimate: 10 weeks **
+**Project Estimate: 10 weeks**
 
-##Stakeholders:
+## Stakeholders:
 Peers and Colleagues looking for health feedback
 
-##Tasks and Roles:
+## Tasks and Roles:
 (These are subject to change)
 Samah Basit - Database / Developing
 Deven Penchel - Designer / Developing
@@ -103,7 +103,7 @@ Michael Garcia - PM / Developing
 Ali Nusair - Database / Developing
 
 
-#Part B
+# Part B
 **Decompose your user stories into tasks.**
 Team Members: Michael Garcia (MG), Samah Basit (SB), Ali Nusair (AN), Deven Panchal (DP) 
  
@@ -165,7 +165,7 @@ As a user, I want a component where I can be directed toward alternatives based 
 Meeting notes occur at this [link](https://trello.com/b/EF1Bg16A/ist-303-project). View meeting cards
 
 **Ensure that your development and testing environment is set up. Be sure to have some working functional (however rudimentary) and test code in your repository.**
-#Testing Environment:
+# Testing Environment:
 **for Mac:**
 Download files from this [location](https://github.com/michaelg-cgu/DASMENT/edit/master/README.md)
 Install the following:
@@ -173,7 +173,7 @@ Install the following:
 * django
 * python3 
 
-##install commands:
+## install commands:
 1. Open the terminal
 2. type: python --version
 ensure python is installed
