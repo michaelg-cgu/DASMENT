@@ -191,6 +191,11 @@ pip3 install django
 11. verify that Manage.py appears
 12. type the following: 
 python3 manage.py runserver
+13. open browser, type the following into the URL: localhost:8000
+
+## FAQS:
+* if runserver error occurs when typing python3 -manageserver, ensure Django is installed in virtual environment
+* if no such directory error occurs when running Manage.py or starting up venvironment, ensure you are in the proper place to start the virtual environment or manage.py
 
 
 
