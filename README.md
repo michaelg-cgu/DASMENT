@@ -160,7 +160,7 @@ As a user, I want to receive recommendation and alternative paths based on my he
 As a user, I want a component where I can be directed toward alternatives based on location (priority 30)  - DP
 
 **Create a burn down chart for monitoring your team’s progress.**
-
+* found in projimg folder
 
 **Include evidence that you are meeting for periodic stand up meetings with your teammates, ideally at least twice a week.**
 Meeting notes occur at this [link](https://trello.com/b/EF1Bg16A/ist-303-project). View meeting cards
@@ -173,6 +173,7 @@ Install the following:
 * venv
 * django
 * python3 
+* pytest
 
 ## install commands:
 1. Open the terminal
@@ -191,6 +192,19 @@ pip3 install django
 11. verify that Manage.py appears
 12. type the following: 
 python3 manage.py runserver
+13. open browser, type the following into the URL: localhost:8000
+
+## Testing
+We use pytest-django
+* install pytest by pip3 install pytest --user
+* in the terminal, navigate to FoodforThought directory, enter the following:
+$ python3 -m pytest test/test_urls.py
+* test currently fails
+
+
+## FAQS:
+* if runserver error occurs when typing python3 -manageserver, ensure Django is installed in virtual environment
+* if no such directory error occurs when running Manage.py or starting up venvironment, ensure you are in the proper place to start the virtual environment or manage.py
 
 
 
