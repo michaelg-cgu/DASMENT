@@ -173,6 +173,7 @@ Install the following:
 * venv
 * django
 * python3 
+* pytest
 
 ## install commands:
 1. Open the terminal
@@ -192,6 +193,14 @@ pip3 install django
 12. type the following: 
 python3 manage.py runserver
 13. open browser, type the following into the URL: localhost:8000
+
+## Testing
+We use pytest-django
+* install pytest by pip3 install pytest --user
+* in the terminal, navigate to FoodforThought directory, enter the following:
+$ python3 -m pytest test/test_urls.py
+* test currently fails
+
 
 ## FAQS:
 * if runserver error occurs when typing python3 -manageserver, ensure Django is installed in virtual environment
