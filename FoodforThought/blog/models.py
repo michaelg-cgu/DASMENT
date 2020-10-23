@@ -10,6 +10,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
+
     # This is a one to many the on_delete, CASCASE, if user is deleted, post is deleted, Will want to change This
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     # add other components here
