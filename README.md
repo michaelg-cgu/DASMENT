@@ -23,7 +23,7 @@ This web application leverages Health data to produce various health risks in ch
 **Several key components to addres are as follows:**
 What foods can affect your appetite, your digestive system  
 Interactive binary/boolean model based on what you eat 
-Forecast an appropriate (carbs, fat, protein) or overall diet breakdown
+Forecast an appropriate (carbs, fat, protein)x or overall diet breakdown
 Mapping local Yelp restaurants/specific items on Whole Foods app/linking general recipes based on likes + avoid foods that irritate
 
 ## User Stories (as of Part A):
@@ -186,6 +186,8 @@ if installed, >3.0 continue
 6. verify that (base) has changed to (venv)
 7. in venv, type the following:
 pip3 install django
+pip3 install pillow
+pip3 install crispy-forms
 8. in venv, change directory again to downloaded github repo. 
 9. Navigate to DASEMENT -> FoodforThought
 10. in command line, type: ls
