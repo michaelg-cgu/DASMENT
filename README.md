@@ -23,7 +23,7 @@ This web application leverages Health data to produce various health risks in ch
 **Several key components to addres are as follows:**
 What foods can affect your appetite, your digestive system  
 Interactive binary/boolean model based on what you eat 
-Forecast an appropriate (carbs, fat, protein) or overall diet breakdown
+Forecast an appropriate (carbs, fat, protein)x or overall diet breakdown
 Mapping local Yelp restaurants/specific items on Whole Foods app/linking general recipes based on likes + avoid foods that irritate
 
 ## User Stories (as of Part A):
@@ -173,6 +173,7 @@ Install the following:
 * venv
 * django
 * python3 
+* pytest
 
 ## install commands:
 1. Open the terminal
@@ -185,12 +186,27 @@ if installed, >3.0 continue
 6. verify that (base) has changed to (venv)
 7. in venv, type the following:
 pip3 install django
+pip3 install pillow
+pip3 install crispy-forms
 8. in venv, change directory again to downloaded github repo. 
 9. Navigate to DASEMENT -> FoodforThought
 10. in command line, type: ls
 11. verify that Manage.py appears
 12. type the following: 
 python3 manage.py runserver
+13. open browser, type the following into the URL: localhost:8000
+
+## Testing
+We use pytest-django
+* install pytest by pip3 install pytest --user
+* in the terminal, navigate to FoodforThought directory, enter the following:
+$ python3 -m pytest test/test_urls.py
+* test currently fails
+
+
+## FAQS:
+* if runserver error occurs when typing python3 -manageserver, ensure Django is installed in virtual environment
+* if no such directory error occurs when running Manage.py or starting up venvironment, ensure you are in the proper place to start the virtual environment or manage.py
 
 
 
