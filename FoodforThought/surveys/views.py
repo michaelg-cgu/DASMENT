@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.http import HttpResponse
+from .forms import testingForm, SnippetForm
 
 
 # Create your views here.
@@ -12,4 +15,25 @@ from django.shortcuts import render
 
 
 def surveys(request):
-    return render(request, 'surveys/foodallergies.html')
+
+    if request.method == 'POST':
+        form = testingForm(request.POST)
+        if form.is_valid():
+            gender = form.cleaned_data['gender']
+            body = form.cleaned_data['body']
+
+            print(gender, body)
+
+    form = testingForm()
+    return render(request, 'surveys/foodallergies.html', {'form': form})
+
+
+def snippet_detail(request):
+
+    if request.method == 'POST':
+        form = SnippetForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = SnippetForm()
+    return render(request, 'surveys/foodallergies.html', {'form': form})
