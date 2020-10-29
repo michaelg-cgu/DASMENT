@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
+import datetime
 
 # Create your models here.
 # extend the user model to have one-to-one relationship
@@ -27,3 +28,20 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
+class UserRegDemographics(models.Model):
+    male = 'male'
+    female = 'female'
+    other = 'other'
+    gender_choices = [(male, 'Male'), (female, 'Female'), (other, 'Other')]
+    location = models.CharField(max_length=30)
+    age = models.IntegerField()
+    gender = models.CharField(max_length=10, choices=gender_choices, default=other)
+    birthdate = models.DateField(default=datetime.date.today)
+    my_weight = models.PositiveIntegerField(default=150)
+    my_referral = models.CharField(max_length=100, default='The Internet')
+
+    def __str__(self):
+        return 'filler text'
+# should this be a child class of the above?
