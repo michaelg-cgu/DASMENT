@@ -6,8 +6,10 @@ from crispy_forms.layout import Layout, Submit
 
 
 class testingForm(forms.Form):
-    gender = forms.ChoiceField(choices=[('male', 'Male'), ('female', 'Female'), ('other', 'Other')])
-    body = forms.CharField(widget=forms.Textarea)
+    allergy = forms.ChoiceField(choices=[('dairy', 'Dairy'), ('soy', 'Soy'), ('wheat', 'Wheat'), ('shellfish', 'Shellfish'), ('nuts', 'Nuts')])
+    reaction = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('toxic', 'Toxic')])
+
+    List_any_other_foods_that_bother_you = forms.CharField(widget=forms.Textarea)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
