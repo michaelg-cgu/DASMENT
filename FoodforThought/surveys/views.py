@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from .forms import testingForm, SnippetForm
+from .forms import testingForm, SnippetForm, EnviromentalForm
 
 
 # Create your views here.
@@ -37,3 +37,13 @@ def snippet_detail(request):
 
     form = SnippetForm()
     return render(request, 'surveys/foodallergies.html', {'form': form})
+
+def enviromental_detail(request):
+
+    if request.method == 'POST':
+        eform = EnviromentalForm(request.POST)
+        if eform.is_valid():
+            eform.save()
+
+    eform = EnviromentalForm()
+    return render(request, 'surveys/enviromentalallergies.html', {'eform': eform})
