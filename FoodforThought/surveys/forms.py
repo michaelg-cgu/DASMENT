@@ -1,5 +1,5 @@
 from django import forms
-from .models import Snippet
+from .models import Snippet, Enviromental
 from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
@@ -27,3 +27,18 @@ class SnippetForm(forms.ModelForm):
                   'allergy3',
                   'allergy4',
                   'allergy5')
+
+class EnviromentalForm(forms.ModelForm):
+
+    class Meta:
+        model = Enviromental
+        fields = ('eallergy1',
+                  'eallergy2',
+                  'eallergy3',
+                  'eallergy4',
+                  'eallergy5',
+                  'severity1',
+                  'severity2',
+                  'severity3',
+                  'severity4',
+                  'severity5')
