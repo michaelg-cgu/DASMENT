@@ -1,37 +1,56 @@
 from django import forms
-from .models import Snippet, Enviromental
-from django.forms import ModelForm
+from .models import Allergy, Reaction, Environmental #, OtherAllergyQuestion
+from django.forms import ModelForm, TextInput
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
 
 
 class testingForm(forms.Form):
-    allergy = forms.ChoiceField(choices=[('dairy', 'Dairy'), ('soy', 'Soy'), ('wheat', 'Wheat'), ('shellfish', 'Shellfish'), ('nuts', 'Nuts')])
-    reaction = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('toxic', 'Toxic')])
+    Allergy_1 = forms.ChoiceField(choices=[('dairy', 'Dairy')])
+    Reaction_1 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
-    List_any_other_foods_that_bother_you = forms.CharField(widget=forms.Textarea)
+    Allergy_2 = forms.ChoiceField(choices=[('soy', 'Soy')])
+    Reaction_2 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.helper = FormHelper
-        self.helper.form_method = 'post'
+    Allergy_3 = forms.ChoiceField(choices=[('wheat', 'Wheat')])
+    Reaction_3 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
 
-class SnippetForm(forms.ModelForm):
+    Allergy_4 = forms.ChoiceField(choices=[('shellfish', 'Shellfish')])
+    Reaction_4 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
+    Allergy_5 = forms.ChoiceField(choices=[('nuts', 'Nuts')])
+    Reaction_5 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
+
+    List_any_other_foods_that_bother_you = forms.CharField(widget=TextInput(attrs={'size':'20'}))
+
+class AllergyForm(forms.ModelForm):
     class Meta:
-        model = Snippet
+        model = Allergy
         fields = ('allergy1',
                   'allergy2',
                   'allergy3',
                   'allergy4',
                   'allergy5')
 
-class EnviromentalForm(forms.ModelForm):
-
+class ReactionForm(forms.ModelForm):
     class Meta:
-        model = Enviromental
+        model = Reaction
+        fields = ('reaction1',
+                  'reaction2',
+                  'reaction3',
+                  'reaction4',
+                  'reaction5')
+
+#class QuestionForm(forms.ModelForm):
+#    class Meta:
+#        model = OtherAllergyQuestion
+#        fields = ('None',)
+
+
+class EnvironmentalForm(forms.ModelForm):
+    class Meta:
+        model = Environmental
         fields = ('eallergy1',
                   'eallergy2',
                   'eallergy3',
