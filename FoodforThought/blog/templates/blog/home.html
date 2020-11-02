@@ -1,10 +1,13 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
-  There is code below this using posts key from the dictionary in views under blog
+  <p>Cluster to go here. For example, see below</p>
+  <img style="width:500px;height:600px;" class="rounded-circle article img" src="{% static 'blog/clusterexample.png'%}" alt="">
   <br>
   {% for post in posts %}
     <article class="media content-section">
       <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+
       <div class="media-body">
         <div class="article-metadata">
           <a class="mr-2" href="#">{{ post.author }}</a>
