@@ -11,35 +11,24 @@ allergyList = [
     ('nuts', 'Nuts')
 ]
 
-severityChoices = [
+reactionList = [
     ('none', 'None'),
     ('mild', 'Mild'),
     ('moderate', 'Moderate'),
     ('severe', 'Severe'),
-    ('deadly', 'Deadly')
+    ('toxic', 'Toxic')
 ]
 
+# Food Allergies
 
-#Food Allergies
+
 class FoodAllergy(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     allergy1 = models.CharField(max_length=20, default='None', choices=allergyList)
-    reaction1 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy2 = models.CharField(max_length=20, default='None', choices=allergyList)
-    reaction2 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy3 = models.CharField(max_length=20, default='None', choices=allergyList)
-    reaction3 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy4 = models.CharField(max_length=20, default='None', choices=allergyList)
-    reaction4 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy5 = models.CharField(max_length=20, default='None', choices=allergyList)
-    reaction5 = models.CharField(max_length=20, default='None', choices=severityChoices)
 
-    def __str__(self):
-        return f'{User.username} Profile'
-
-
-    def save(self, *args, **kawargs):
-        super(FoodAllergy, self).save()  # run the save method of the parent
 
 
 class OtherAllergyQuestion(models.Model):
@@ -57,9 +46,16 @@ environmentalChoices = [
     ('insect bites', 'Insect Bites')
 ]
 
+severityChoices = [
+    ('none', 'None'),
+    ('mild', 'Mild'),
+    ('moderate', 'Moderate'),
+    ('severe', 'Severe'),
+    ('deadly', 'Deadly')
+]
 
 class Environmental(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     eallergy1 = models.CharField(max_length=20, default='None', choices=environmentalChoices)
     severity1 = models.CharField(max_length=20, default='None', choices=severityChoices)
     eallergy2 = models.CharField(max_length=20, default='None', choices=environmentalChoices)
@@ -72,7 +68,9 @@ class Environmental(models.Model):
     severity5 = models.CharField(max_length=20, default='None', choices=severityChoices)
 
     def __str__(self):
-        return f'{User.username} Profile'
+        #user = User.objects.get(id=1)
+        return f'{self.user.username} Evironment Results'
+        #{{ user.username }}
 
     def save(self, *args, **kawargs):
         super(Environmental, self).save()  # run the save method of the parent

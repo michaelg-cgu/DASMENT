@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .forms import  AllergyForm, EnvironmentalForm  #testingForm, QuestionForm
+from .forms import AllergyForm, EnvironmentalForm  # testingForm, QuestionForm
 
 
 @login_required
@@ -37,7 +37,9 @@ def environmental_detail(request):
     if request.method == 'POST':
         eform = EnvironmentalForm(request.POST)
         if eform.is_valid():
-            eform.save()
+            enviro = eform.save(commit=False)
+            enviro.user = request.user
+            enviro.save()
             messages.success(request, f'Your account has been updated!')
             return redirect('profile')
 
