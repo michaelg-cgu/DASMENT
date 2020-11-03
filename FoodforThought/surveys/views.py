@@ -24,8 +24,9 @@ def surveys(request):
             reaction5 = form.cleaned_data['Reaction_5']
 
             form.save()
-
-    form = testingForm()
+            messages.success(request, f'Your Account has been Create! You are now able to login')
+    else:
+        form = testingForm()
     return render(request, 'surveys/foodallergies.html', {'form': form})
 
 
@@ -58,6 +59,8 @@ def environmental_detail(request):
         eform = EnvironmentalForm(request.POST)
         if eform.is_valid():
             eform.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
 
     eform = EnvironmentalForm()
     return render(request, 'surveys/enviromentalallergies.html', {'eform': eform})
