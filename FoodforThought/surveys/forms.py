@@ -52,12 +52,12 @@ class EnvironmentalForm(forms.ModelForm):
     class Meta:
         model = Environmental
         fields = ('eallergy1',
-                  'eallergy2',
-                  'eallergy3',
-                  'eallergy4',
-                  'eallergy5',
                   'severity1',
+                  'eallergy2',
                   'severity2',
+                  'eallergy3',
                   'severity3',
+                  'eallergy4',
                   'severity4',
+                  'eallergy5',
                   'severity5')
