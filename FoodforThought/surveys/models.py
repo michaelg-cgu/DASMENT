@@ -30,13 +30,6 @@ class FoodAllergy(models.Model):
     allergy5 = models.CharField(max_length=20, default='None', choices=allergyList)
 
 
-class Reaction(models.Model):
-    reaction1 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction2 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction3 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction4 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction5 = models.CharField(max_length=20, default='None', choices=reactionList)
-
 
 class OtherAllergyQuestion(models.Model):
     question = models.CharField(max_length=20)
@@ -60,7 +53,6 @@ severityChoices = [
     ('severe', 'Severe'),
     ('deadly', 'Deadly')
 ]
-
 
 class Environmental(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
