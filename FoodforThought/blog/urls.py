@@ -5,4 +5,5 @@ from . import views  # . is current directory
 urlpatterns = [
     path('', views.home, name='blog-home'),
     path('about/', views.about, name='blog-about'),
+    path('mydashboard/', views.mydashboard, name='blog-about'),
 ]
