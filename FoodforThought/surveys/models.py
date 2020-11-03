@@ -11,23 +11,35 @@ allergyList = [
     ('nuts', 'Nuts')
 ]
 
-reactionList = [
+severityChoices = [
     ('none', 'None'),
     ('mild', 'Mild'),
     ('moderate', 'Moderate'),
     ('severe', 'Severe'),
-    ('toxic', 'Toxic')
+    ('deadly', 'Deadly')
 ]
 
-# Food Allergies
 
-
-class Allergy(models.Model):
+#Food Allergies
+class FoodAllergy(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     allergy1 = models.CharField(max_length=20, default='None', choices=allergyList)
+    reaction1 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy2 = models.CharField(max_length=20, default='None', choices=allergyList)
+    reaction2 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy3 = models.CharField(max_length=20, default='None', choices=allergyList)
+    reaction3 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy4 = models.CharField(max_length=20, default='None', choices=allergyList)
+    reaction4 = models.CharField(max_length=20, default='None', choices=severityChoices)
     allergy5 = models.CharField(max_length=20, default='None', choices=allergyList)
+    reaction5 = models.CharField(max_length=20, default='None', choices=severityChoices)
+
+    def __str__(self):
+        return f'{User.username} Profile'
+
+
+    def save(self, *args, **kawargs):
+        super(FoodAllergy, self).save()  # run the save method of the parent
 
 
 class Reaction(models.Model):
@@ -36,6 +48,7 @@ class Reaction(models.Model):
     reaction3 = models.CharField(max_length=20, default='None', choices=reactionList)
     reaction4 = models.CharField(max_length=20, default='None', choices=reactionList)
     reaction5 = models.CharField(max_length=20, default='None', choices=reactionList)
+
 
 
 class OtherAllergyQuestion(models.Model):
@@ -53,13 +66,6 @@ environmentalChoices = [
     ('insect bites', 'Insect Bites')
 ]
 
-severityChoices = [
-    ('none', 'None'),
-    ('mild', 'Mild'),
-    ('moderate', 'Moderate'),
-    ('severe', 'Severe'),
-    ('deadly', 'Deadly')
-]
 
 
 class Environmental(models.Model):

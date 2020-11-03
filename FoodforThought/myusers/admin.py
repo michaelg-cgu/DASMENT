@@ -5,5 +5,4 @@ from .models import Profile, UserRegDemographics
 # register profile model
 
 admin.site.register(Profile)
-
 admin.site.register(UserRegDemographics)
