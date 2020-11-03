@@ -42,15 +42,6 @@ class FoodAllergy(models.Model):
         super(FoodAllergy, self).save()  # run the save method of the parent
 
 
-class Reaction(models.Model):
-    reaction1 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction2 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction3 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction4 = models.CharField(max_length=20, default='None', choices=reactionList)
-    reaction5 = models.CharField(max_length=20, default='None', choices=reactionList)
-
-
-
 class OtherAllergyQuestion(models.Model):
     question = models.CharField(max_length=20)
 
@@ -65,7 +56,6 @@ environmentalChoices = [
     ('mold', 'Mold'),
     ('insect bites', 'Insect Bites')
 ]
-
 
 
 class Environmental(models.Model):
