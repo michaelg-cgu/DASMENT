@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from .forms import testingForm, AllergyForm, ReactionForm, EnvironmentalForm #, #QuestionForm
+from django.contrib.auth.decorators import login_required
+from .forms import testingForm, AllergyForm, ReactionForm, EnvironmentalForm  # , #QuestionForm
 
 
+@login_required
 def surveys(request):
 
     if request.method == 'POST':
@@ -37,6 +39,7 @@ def allergy_detail(request):
     form = AllergyForm()
     return render(request, 'surveys/foodallergies.html', {'form': form})
 
+
 def reaction_detail(request):
 
     if request.method == 'POST':
@@ -48,6 +51,7 @@ def reaction_detail(request):
     return render(request, 'surveys/foodallergies.html', {'form': form})
 
 
+@login_required
 def environmental_detail(request):
 
     if request.method == 'POST':
