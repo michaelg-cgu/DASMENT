@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import  AllergyForm, EnvironmentalForm  #testingForm, QuestionForm
 
 
-#@login_required
+@login_required
 def surveys(request):
 
     if request.method == 'POST':
