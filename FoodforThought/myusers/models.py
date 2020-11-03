@@ -31,6 +31,7 @@ class Profile(models.Model):
 
 
 class UserRegDemographics(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     male = 'male'
     female = 'female'
     other = 'other'
@@ -43,5 +44,5 @@ class UserRegDemographics(models.Model):
     my_referral = models.CharField(max_length=100, default='The Internet')
 
     def __str__(self):
-        return 'filler text'
+        return f'{self.user} demographics'
 # should this be a child class of the above?

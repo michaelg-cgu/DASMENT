@@ -1,9 +1,8 @@
 from django import forms
-from .models import Allergy, Reaction, Environmental  # , OtherAllergyQuestion
+from .models import FoodAllergy, Reaction, Environmental  # , OtherAllergyQuestion
 from django.forms import ModelForm, TextInput
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
-from django.contrib.auth.forms import UserCreationForm
 
 
 class testingForm(forms.Form):
@@ -32,7 +31,7 @@ class testingForm(forms.Form):
 
 class AllergyForm(forms.ModelForm):
     class Meta:
-        model = Allergy
+        model = FoodAllergy
         fields = ('allergy1',
                   'allergy2',
                   'allergy3',

@@ -22,7 +22,7 @@ reactionList = [
 # Food Allergies
 
 
-class Allergy(models.Model):
+class FoodAllergy(models.Model):
     allergy1 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy2 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy3 = models.CharField(max_length=20, default='None', choices=allergyList)
