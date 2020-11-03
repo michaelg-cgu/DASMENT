@@ -23,3 +23,7 @@ def home(request):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+
+def mydashboard(request):
+    return render(request, 'blog/mydashboard.html', {'title': 'My-Dashboard'})
