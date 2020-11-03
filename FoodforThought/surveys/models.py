@@ -63,7 +63,7 @@ severityChoices = [
 
 
 class Environmental(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     eallergy1 = models.CharField(max_length=20, default='None', choices=environmentalChoices)
     severity1 = models.CharField(max_length=20, default='None', choices=severityChoices)
     eallergy2 = models.CharField(max_length=20, default='None', choices=environmentalChoices)
@@ -76,7 +76,9 @@ class Environmental(models.Model):
     severity5 = models.CharField(max_length=20, default='None', choices=severityChoices)
 
     def __str__(self):
-        return f'{User.username} Profile'
+        #user = User.objects.get(id=1)
+        return f'{self.user.username} Evironment Results'
+        #{{ user.username }}
 
     def save(self, *args, **kawargs):
         super(Environmental, self).save()  # run the save method of the parent

@@ -1,28 +1,34 @@
 from django import forms
-from .models import Allergy, Reaction, Environmental #, OtherAllergyQuestion
+from .models import Allergy, Reaction, Environmental  # , OtherAllergyQuestion
 from django.forms import ModelForm, TextInput
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
+from django.contrib.auth.forms import UserCreationForm
 
 
 class testingForm(forms.Form):
     Allergy_1 = forms.ChoiceField(choices=[('dairy', 'Dairy')])
-    Reaction_1 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
+    Reaction_1 = forms.ChoiceField(choices=[(
+        'none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
     Allergy_2 = forms.ChoiceField(choices=[('soy', 'Soy')])
-    Reaction_2 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
+    Reaction_2 = forms.ChoiceField(choices=[(
+        'none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
     Allergy_3 = forms.ChoiceField(choices=[('wheat', 'Wheat')])
-    Reaction_3 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
-
+    Reaction_3 = forms.ChoiceField(choices=[(
+        'none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
     Allergy_4 = forms.ChoiceField(choices=[('shellfish', 'Shellfish')])
-    Reaction_4 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
+    Reaction_4 = forms.ChoiceField(choices=[(
+        'none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
     Allergy_5 = forms.ChoiceField(choices=[('nuts', 'Nuts')])
-    Reaction_5 = forms.ChoiceField(choices=[('none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
+    Reaction_5 = forms.ChoiceField(choices=[(
+        'none', 'None'), ('mild', 'Mild'), ('moderate', 'Moderate'), ('severe', 'Severe'), ('deadly', 'Deadly')])
 
-    List_any_other_foods_that_bother_you = forms.CharField(widget=TextInput(attrs={'size':'20'}))
+    List_any_other_foods_that_bother_you = forms.CharField(widget=TextInput(attrs={'size': '20'}))
+
 
 class AllergyForm(forms.ModelForm):
     class Meta:
@@ -33,6 +39,7 @@ class AllergyForm(forms.ModelForm):
                   'allergy4',
                   'allergy5')
 
+
 class ReactionForm(forms.ModelForm):
     class Meta:
         model = Reaction
@@ -42,7 +49,7 @@ class ReactionForm(forms.ModelForm):
                   'reaction4',
                   'reaction5')
 
-#class QuestionForm(forms.ModelForm):
+# class QuestionForm(forms.ModelForm):
 #    class Meta:
 #        model = OtherAllergyQuestion
 #        fields = ('None',)
