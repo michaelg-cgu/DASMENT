@@ -55,7 +55,7 @@ def reaction_detail(request):
 def environmental_detail(request):
 
     if request.method == 'POST':
-        eform = EnviromentalForm(request.POST)
+        eform = EnvironmentalForm(request.POST)
         if eform.is_valid():
             eform.save()
 
