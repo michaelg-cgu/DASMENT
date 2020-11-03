@@ -23,12 +23,15 @@ reactionList = [
 
 
 class FoodAllergy(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     allergy1 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy2 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy3 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy4 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy5 = models.CharField(max_length=20, default='None', choices=allergyList)
 
+    def __str__(self):
+        return f'{self.user.username} Food Results'
 
 
 class OtherAllergyQuestion(models.Model):
@@ -53,6 +56,7 @@ severityChoices = [
     ('severe', 'Severe'),
     ('deadly', 'Deadly')
 ]
+
 
 class Environmental(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

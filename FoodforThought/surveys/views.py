@@ -22,9 +22,10 @@ def surveys(request):
             #reaction3 = form.cleaned_data['Reaction_3']
             #reaction4 = form.cleaned_data['Reaction_4']
             #reaction5 = form.cleaned_data['Reaction_5']
-
-            form.save()
-            messages.success(request, f'Your Account has been Create! You are now able to login')
+            foodal = form.save(commit=False)
+            foodal.user = request.user
+            foodal.save()
+            messages.success(request, f'Thank you for your information')
             return redirect('profile')
 
     form = AllergyForm()

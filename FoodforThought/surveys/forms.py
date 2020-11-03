@@ -1,5 +1,5 @@
 from django import forms
-from .models import FoodAllergy, Reaction, Environmental  # , OtherAllergyQuestion
+from .models import FoodAllergy, Environmental  # , OtherAllergyQuestion
 from django.forms import ModelForm, TextInput
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
@@ -38,15 +38,6 @@ class AllergyForm(forms.ModelForm):
                   'allergy4',
                   'allergy5')
 
-
-class ReactionForm(forms.ModelForm):
-    class Meta:
-        model = Reaction
-        fields = ('reaction1',
-                  'reaction2',
-                  'reaction3',
-                  'reaction4',
-                  'reaction5')
 
 # class QuestionForm(forms.ModelForm):
 #    class Meta:
