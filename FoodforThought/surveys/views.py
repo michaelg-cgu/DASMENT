@@ -2,20 +2,20 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .forms import testingForm, AllergyForm, ReactionForm, EnvironmentalForm  # , #QuestionForm
+from .forms import  AllergyForm, EnvironmentalForm  #testingForm, QuestionForm
 
 
-@login_required
+#@login_required
 def surveys(request):
 
     if request.method == 'POST':
-        form = testingForm(request.POST)
+        form = AllergyForm(request.POST)
         if form.is_valid():
             allergy1 = form.cleaned_data['Allergy_1']
             allergy2 = form.cleaned_data['Allergy_2']
             allergy3 = form.cleaned_data['Allergy_3']
             allergy4 = form.cleaned_data['Allergy_4']
-            allergy5 = form.cleaned_data['Allergy_5']
+            allergy5 = form.cleaned_data['Allergy 5']
 
             reaction1 = form.cleaned_data['Reaction_1']
             reaction2 = form.cleaned_data['Reaction_2']
@@ -25,29 +25,7 @@ def surveys(request):
 
             form.save()
 
-    form = testingForm()
-    return render(request, 'surveys/foodallergies.html', {'form': form})
-
-
-def allergy_detail(request):
-
-    if request.method == 'POST':
-        form = AllergyForm(request.POST)
-        if form.is_valid():
-            form.save()
-
     form = AllergyForm()
-    return render(request, 'surveys/foodallergies.html', {'form': form})
-
-
-def reaction_detail(request):
-
-    if request.method == 'POST':
-        form = ReactionForm(request.POST)
-        if form.is_valid():
-            form.save()
-
-    form = ReactionForm()
     return render(request, 'surveys/foodallergies.html', {'form': form})
 
 
