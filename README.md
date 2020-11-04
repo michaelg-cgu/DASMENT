@@ -209,4 +209,14 @@ $ python3 -m pytest test/test_urls.py
 * if no such directory error occurs when running Manage.py or starting up venvironment, ensure you are in the proper place to start the virtual environment or manage.py
 
 
-
+# Part C
+## Milestone 1 Deliverables:​
+* Design Database​
+* Ensure user data is stored in backend​
+* Login functionality – authentication​
+* Login functionality – pass data to backend​
+* Create User Registration Form​
+* Pass registration data to the backend​
+* User Data fields to research​
+* Deploy Food Allergy Survey​
+* Deploy Seasonal Allergy Survey
