@@ -1,8 +1,21 @@
 {% extends "blog/base.html" %}
 {% load static %}
 {% block content %}
-  <p>Cluster to go here. For example, see below</p>
-  <img style="width:500px;height:600px;" class="rounded-circle article img" src="{% static 'blog/clusterexample.png'%}" alt="">
+  <!-- <p>Clusster to go here. For example, see below</p>
+  <img style="width:500px;height:600px;" class="rounded-circle article img" src="{% static 'blog/clusterexample.png'%}" alt=""> -->
+  <h2>Welcome to the Claremont food sensitivity chart!</h2>
+  <p class="article content"> Please use the map below to better understand food sensitivity risks in the Claremont University region.</p>
+  <h2>How it works</h2>
+  <p class="article content">Each restuarant is registered once 3 users have eaten and reported findings. Findings are currently binary, either a good experience in 72 hours or bad.
+  Current initiative is to evaluate the risk a person with food allergies may have when dining at any of the restaurants captured below. </p>
+  <p>Below is a POC</p>
+  <p>ledgar is as follows:<br>
+    <li>Negative score - <b>Avoid at all cost </b></li>
+    <li>Score < 5 - <b>Avoid</b></li>
+    <li>Score > 5 - <b>Personal Choice</b></li>
+    <li>Score > 10 - <b>Minimal risk experience so far</b></li>
+  </p>
+  {{ m | safe }}
   <br>
   {% for post in posts %}
     <article class="media content-section">
