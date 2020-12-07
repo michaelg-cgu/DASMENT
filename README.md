@@ -199,9 +199,12 @@ python3 manage.py runserver
 ## Testing
 We use pytest-django
 * install pytest by pip3 install pytest --user
+* install django testing by pip3 install pytest-django
+* install cov testing by pip3 install pytest-cov
+* Do this both inside and outside of virtual env if you run into errors
 * in the terminal, navigate to FoodforThought directory, enter the following:
-$ python3 -m pytest test/test_urls.py
-* test currently fails
+$ pytest -v
+* To change files for testing, for testing, edit pytest.ini
 
 
 ## FAQS:
@@ -221,4 +224,9 @@ $ python3 -m pytest test/test_urls.py
 * Deploy Food Allergy Survey​
 * Deploy Seasonal Allergy Survey
 
-Updaed burnchart found in proj image
+Updated burnchart found in proj image
+
+
+# Part D
+## Milestone 2 Deliverables:​
+
