@@ -205,6 +205,9 @@ We use pytest-django
 * in the terminal, navigate to FoodforThought directory, enter the following:
 $ pytest -v
 * To change files for testing, for testing, edit pytest.ini
+* Coverage Testing: $ coverage run -m pytest
+* Coverage Report: coverage report -m to see results on terminal
+$ coverage html
 
 
 ## FAQS:
