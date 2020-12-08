@@ -67,7 +67,7 @@ def about(request):
 @login_required()
 def mydashboard(request):
     pk = request.user.pk
-    print(pk)
+    # print(pk)
     user = User.objects.get(pk=pk)
     c = UserRegDemographics.objects.all()
     d = FoodAllergy.objects.all()
@@ -76,8 +76,4 @@ def mydashboard(request):
     context2 = dict(testing2=d)
     context2_1 = dict(testing3=e)
     context3 = {**context, **context2, **context2_1}
-    print('context1', context)
-    print('hello', context2)
-    print('hello', context2_1)
-    print('helep', context3)
     return render(request, 'blog/mydashboard.html', context3)
