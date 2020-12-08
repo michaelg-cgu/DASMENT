@@ -197,7 +197,7 @@ validators==0.18.1
 zipp==3.3.0
 
 8. in venv, change directory again to downloaded github repo. 
-9. Navigate to DASEMENT -> FoodforThought
+9. Navigate to DASMENT -> FoodforThought
 10. in command line, type: ls
 11. verify that Manage.py appears
 12. type the following: 
