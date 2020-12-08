@@ -34,35 +34,22 @@ As a User, I want to ensure only certain people have access to my content
 
 As a User, I want to upload Health data in a particular format 
 
-As a User, I want to provide a link my doctor could click on and see my Health, risk factors, and journal of restaurants  
+As a User, I want to provide a dashboard my doctor could click on and see my Health, risk factors, and journal of restaurants  
 
 As a User, I want to track locations where food made me feel sick and create a list of restaurants to avoid with particular items 
 
-As a User, I want to know Location (as it relates to stress) or Water quality at water fountain after feeling sick 
-
 As a User, I want the web application to be mobile ready 
-
-As a User, I want to use a database to remember specific foods or restaurants that made me sick 
 
 As a User, I would like a network of restaurants that made others with similar issues sick (if I say I gluten sensitive, I want to know what restaurants in an area may adhere to gluten sensitivity. User driven) 
 
-As a User, I want to upload photos of food 
-
-As a User, I want to upload restaurant lists 
-
-As a User, I want a GUI  
-
-As a User, I want to upload notes, date specific 
-
-As a User, I want to edit and delete notes but I may not want the database to overwrite old notes 
+As a User, I want an interactive website with user forms
 
 As a User, I want to upload photos of myself for an avatar (profile photo) 
 
-As a User, I want charts of Health data 
+As a User, I want a website storing data which could later be used to build interactive charts
 
-As a User, I want a matrix of Health data with key findings of these attributes 
+As a User, I want a report of Health data with key findings of these attributes 
 
-As a User, restaurants and past foods should auto populate as journal is updated 
 
 ## Estimated Timeline, Part A
 Login Function 
@@ -88,7 +75,6 @@ I want to upload notes, date specific – 1 week
 
 Database integration with web application 
 I want a matrix of Health data with key findings of these attributes – 3.5 weeks 
-If possible, restaurants and past foods should auto populate as journal is updated – 3 weeks  
 
 **Project Estimate: 10 weeks**
 
@@ -184,10 +170,42 @@ if installed, >3.0 continue
 4. in the terminal, navigate to the virtualenv folder using cd commands (change directory)
 5. type source venv/bin/activiate
 6. verify that (base) has changed to (venv)
-7. in venv, type the following:
-pip3 install django
-pip3 install pillow
-pip3 install crispy-forms
+7. in venv, ensure the following are installed. Simply use pip install */PACKAGE*/:
+asgiref==3.2.10
+attrs==20.2.0
+branca==0.4.1
+certifi==2020.11.8
+chardet==3.0.4
+cycler==0.10.0
+decorator==4.4.2
+Django==3.1.2
+django-crispy-forms==1.9.2
+folium==0.11.0
+idna==2.10
+importlib-metadata==2.0.0
+iniconfig==1.0.1
+Jinja2==2.11.2
+kiwisolver==1.3.1
+MarkupSafe==1.1.1
+matplotlib==3.3.3
+numpy==1.19.4
+packaging==20.4
+pandas==1.1.4
+Pillow==8.0.0
+pluggy==0.13.1
+py==1.9.0
+pyparsing==2.4.7
+pytest==6.1.1
+python-dateutil==2.8.1
+pytz==2020.1
+requests==2.25.0
+six==1.15.0
+sqlparse==0.3.1
+toml==0.10.1
+urllib3==1.26.2
+validators==0.18.1
+zipp==3.3.0
+
 8. in venv, change directory again to downloaded github repo. 
 9. Navigate to DASEMENT -> FoodforThought
 10. in command line, type: ls
