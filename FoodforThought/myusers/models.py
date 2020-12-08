@@ -31,7 +31,7 @@ class Profile(models.Model):
 
 
 class UserRegDemographics(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     male = 'male'
     female = 'female'
     other = 'other'

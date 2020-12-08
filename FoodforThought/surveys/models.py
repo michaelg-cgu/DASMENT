@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from myusers.models import Profile
 
+
 allergyList = [
     ('none', 'None'),
     ('dairy', 'Dairy'),
@@ -23,7 +24,7 @@ reactionList = [
 
 
 class FoodAllergy(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     allergy1 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy2 = models.CharField(max_length=20, default='None', choices=allergyList)
     allergy3 = models.CharField(max_length=20, default='None', choices=allergyList)
@@ -59,7 +60,7 @@ severityChoices = [
 
 
 class Environmental(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     eallergy1 = models.CharField(max_length=20, default='None', choices=environmentalChoices)
     severity1 = models.CharField(max_length=20, default='None', choices=severityChoices)
     eallergy2 = models.CharField(max_length=20, default='None', choices=environmentalChoices)

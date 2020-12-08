@@ -17,7 +17,7 @@ def register(request):
             profile.save()
 
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Your Account has been Create! You are now able to login')
+            messages.success(request, f'Your Account has been Created! You are now able to login')
             return redirect('login')
     else:
         form = UserRegisterForm()
@@ -25,6 +25,8 @@ def register(request):
     return render(request, 'myusers/register.html', {'form': form, 'profile_form': profile_form})
 
 # the @ adds functionality to the component below
+
+
 @login_required
 def profile(request):
     if request.method == 'POST':

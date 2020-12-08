@@ -1,14 +1,16 @@
 from django.shortcuts import render
 from .models import Post
 import folium
+from django.contrib.auth.models import User
 from folium import plugins
 import pandas as pd
 import numpy as np
+import matplotlib as mpl
+import sqlite3
+from surveys.models import FoodAllergy, Environmental
+from myusers.models import UserRegDemographics
+from django.contrib.auth.decorators import login_required
 
-#below is not needed
-#from django.http import HttpResponse
-
-# no longer dummy datas
 df_incidents = pd.read_csv(
     '/Users/michaelgarcia/Documents/PythonProjects/IST303/projects/DASMENT/FoodforThought/blog/restaurants.csv')
 
@@ -17,13 +19,10 @@ def home(request):
     # Create Map
     m = folium.Map(location=[34.09812147677658, -117.71827532972465], zoom_start=15)
 
-    #folium.Marker(location=[34.05, -118.24]).add_to(m)
-    # testing
-
     # the featuregroup is for generic bubbles
     incidents = folium.map.FeatureGroup()
     # the cluster feature is for clusters
-    #incidents = plugins.MarkerCluster(add_to(m))
+    # incidents = plugins.MarkerCluster(add_to(m))
     # loop through the 100 crimes and add each to the incidents feature group
     for lat, lng, in zip(df_incidents.Y, df_incidents.X):
         incidents.add_child(
@@ -65,9 +64,20 @@ def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
 
 
+@login_required()
 def mydashboard(request):
-    return render(request, 'blog/mydashboard.html', {'title': 'My-Dashboard'})
-
-# def map(request):
-#     m = folium.Map()
-#     return render(request, m)
+    pk = request.user.pk
+    print(pk)
+    user = User.objects.get(pk=pk)
+    c = UserRegDemographics.objects.all()
+    d = FoodAllergy.objects.all()
+    e = Environmental.objects.all()
+    context = dict(testing=c)
+    context2 = dict(testing2=d)
+    context2_1 = dict(testing3=e)
+    context3 = {**context, **context2, **context2_1}
+    print('context1', context)
+    print('hello', context2)
+    print('hello', context2_1)
+    print('helep', context3)
+    return render(request, 'blog/mydashboard.html', context3)
