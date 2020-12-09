@@ -198,20 +198,16 @@ zipp==3.3.0
 
 8. in venv, change directory again to downloaded github repo. 
 9. Navigate to DASMENT -> FoodforThought
-10. Within FoodforThought is the following path containing dummy data for the map: FoodforThought/blog/restaurants.csv
-11. Locate the file's absolute path and copy to clipboard (ex mac: /Users/*name*/Documents/PythonProjects/IST303/projects/DASMENT/FoodforThought/blog/restaurants.csv
-12. Load your absolute path into the website by navigating to the following file: FoodforThought/blog/views.py
-13. In views.py, locate df_incidents (line 14). load csv file absolute path from step 11 into pd.read_csv('PLACE FILE PATH HERE')
-14. in command line, type: ls
-15. verify that Manage.py appears
-16. type the following: 
+10. in command line, type: ls
+11. verify that Manage.py appears
+12. change directory to blog and open views.py. In line 15, ensure the path is setup to where your local files are
+13. navigate back to FoodforThought folder, type the following: 
 python3 manage.py runserver
-17. open browser, type the following into the URL: localhost:8000
+14. open browser, type the following into the URL: localhost:8000/
 
 ## FAQS:
 * if runserver error occurs when typing python3 -manageserver, ensure Django is installed in virtual environment
 * if no such directory error occurs when running Manage.py or starting up venvironment, ensure you are in the proper place to start the virtual environment or manage.py
-* if everything appears correctly in the steps above, ensure the absolute path is properly inserted into blogs/views.py
 
 # Part C
 ## Milestone 1 Deliverables:​
